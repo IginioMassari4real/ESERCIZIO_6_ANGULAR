@@ -1,134 +1,20 @@
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss2.2.19/dist/tailwind.min.css" rel="stylesheet">
-<h1 style="color: blue;">I 10 GIOCATORI CON L'OVERALL PIU' ALTO DI FIFA 24</h1>
+<h1 style="color: blue; margin-left:auto; margin-right:auto">I 10 GIOCATORI CON L'OVERALL PIU' ALTO DI FIFA 24</h1> 
+<img class="h-12 w-12 flex-none rounded-full bg-gray-50" style="width: 260px; " src="https://sm.ign.com/t/ign_it/screenshot/default/asf_j8hj.1280.jpg" alt="">
+<div class="card" style="width:400px;" *ngFor="let element of calciatori, index as i">
 <ul role="list" class="divide-y divide-gray-100">
     <li class="flex justify-between gap-x-6 py-5">
       <div class="flex min-w-0 gap-x-4">
-        <img class="h-12 w-12 flex-none rounded-full bg-gray-50" style="width: 260px;" src="https://images2.gazzettaobjects.it/assets-mc/calcio/giocatori/kylian_mbappe_20121998.png" alt="">
+        <img class="h-12 w-12 flex-none rounded-full bg-gray-50" style="width: 260px;" src="{{element.immagine}}" alt="">
         <div class="min-w-0 flex-auto">
-          <p class="text-sm font-semibold leading-6 text-gray-900">Kylian Mbappè (Overall: 91)</p>
-          <p class="mt-1 truncate text-xs leading-5 text-gray-500">Età: 25 anni</p>
+          <p class="text-sm font-semibold leading-6 text-gray-900">{{element.nome}} {{element.cognome}} (overall:{{element.overall}})</p>
+          <p class="mt-1 truncate text-xs leading-5 text-gray-500">età: {{element.eta}}</p>
         </div>
       </div>
       <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-        <p class="text-sm leading-6 text-gray-900">Nazionalità: </p>
-        <p class="mt-1 text-xs leading-5 text-gray-500">Ruolo: Attaccante</p>
+        <p class="text-sm leading-6 text-gray-900">nazionalità: {{element.nazionalita}}</p>
+        <p class="mt-1 text-xs leading-5 text-gray-500">ruolo: {{element.ruolo}}</p>
+        <p class="mt-1 text-xs leading-5 text-gray-500">squadra: {{element.squadra}}</p>
       </div>
     </li>
-    <li class="flex justify-between gap-x-6 py-5">
-        <div class="flex min-w-0 gap-x-4">
-          <img class="h-12 w-12 flex-none rounded-full bg-gray-50" style="width: 260px;" src="https://images2.gazzettaobjects.it/assets-mc/calcio/giocatori/kylian_mbappe_20121998.png" alt="">
-          <div class="min-w-0 flex-auto">
-            <p class="text-sm font-semibold leading-6 text-gray-900">Kylian Mbappè (Overall: 91)</p>
-            <p class="mt-1 truncate text-xs leading-5 text-gray-500">Età: 25 anni</p>
-          </div>
-        </div>
-        <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-          <p class="text-sm leading-6 text-gray-900">Nazionalità: </p>
-          <p class="mt-1 text-xs leading-5 text-gray-500">Ruolo: Attaccante</p>
-        </div>
-      </li>
-      <li class="flex justify-between gap-x-6 py-5">
-        <div class="flex min-w-0 gap-x-4">
-          <img class="h-12 w-12 flex-none rounded-full bg-gray-50" style="width: 260px;" src="https://images2.gazzettaobjects.it/assets-mc/calcio/giocatori/kylian_mbappe_20121998.png" alt="">
-          <div class="min-w-0 flex-auto">
-            <p class="text-sm font-semibold leading-6 text-gray-900">Kylian Mbappè (Overall: 91)</p>
-            <p class="mt-1 truncate text-xs leading-5 text-gray-500">Età: 25 anni</p>
-          </div>
-        </div>
-        <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-          <p class="text-sm leading-6 text-gray-900">Nazionalità: </p>
-          <p class="mt-1 text-xs leading-5 text-gray-500">Ruolo: Attaccante</p>
-        </div>
-      </li>
-      <li class="flex justify-between gap-x-6 py-5">
-        <div class="flex min-w-0 gap-x-4">
-          <img class="h-12 w-12 flex-none rounded-full bg-gray-50" style="width: 260px;" src="https://images2.gazzettaobjects.it/assets-mc/calcio/giocatori/kylian_mbappe_20121998.png" alt="">
-          <div class="min-w-0 flex-auto">
-            <p class="text-sm font-semibold leading-6 text-gray-900">Kylian Mbappè (Overall: 91)</p>
-            <p class="mt-1 truncate text-xs leading-5 text-gray-500">Età: 25 anni</p>
-          </div>
-        </div>
-        <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-          <p class="text-sm leading-6 text-gray-900">Nazionalità: </p>
-          <p class="mt-1 text-xs leading-5 text-gray-500">Ruolo: Attaccante</p>
-        </div>
-      </li>
-      <li class="flex justify-between gap-x-6 py-5">
-        <div class="flex min-w-0 gap-x-4">
-          <img class="h-12 w-12 flex-none rounded-full bg-gray-50" style="width: 260px;" src="https://images2.gazzettaobjects.it/assets-mc/calcio/giocatori/kylian_mbappe_20121998.png" alt="">
-          <div class="min-w-0 flex-auto">
-            <p class="text-sm font-semibold leading-6 text-gray-900">Kylian Mbappè (Overall: 91)</p>
-            <p class="mt-1 truncate text-xs leading-5 text-gray-500">Età: 25 anni</p>
-          </div>
-        </div>
-        <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-          <p class="text-sm leading-6 text-gray-900">Nazionalità: </p>
-          <p class="mt-1 text-xs leading-5 text-gray-500">Ruolo: Attaccante</p>
-        </div>
-      </li>
-      <li class="flex justify-between gap-x-6 py-5">
-        <div class="flex min-w-0 gap-x-4">
-          <img class="h-12 w-12 flex-none rounded-full bg-gray-50" style="width: 260px;" src="https://images2.gazzettaobjects.it/assets-mc/calcio/giocatori/kylian_mbappe_20121998.png" alt="">
-          <div class="min-w-0 flex-auto">
-            <p class="text-sm font-semibold leading-6 text-gray-900">Kylian Mbappè (Overall: 91)</p>
-            <p class="mt-1 truncate text-xs leading-5 text-gray-500">Età: 25 anni</p>
-          </div>
-        </div>
-        <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-          <p class="text-sm leading-6 text-gray-900">Nazionalità: </p>
-          <p class="mt-1 text-xs leading-5 text-gray-500">Ruolo: Attaccante</p>
-        </div>
-      </li>
-      <li class="flex justify-between gap-x-6 py-5">
-        <div class="flex min-w-0 gap-x-4">
-          <img class="h-12 w-12 flex-none rounded-full bg-gray-50" style="width: 260px;" src="https://images2.gazzettaobjects.it/assets-mc/calcio/giocatori/kylian_mbappe_20121998.png" alt="">
-          <div class="min-w-0 flex-auto">
-            <p class="text-sm font-semibold leading-6 text-gray-900">Kylian Mbappè (Overall: 91)</p>
-            <p class="mt-1 truncate text-xs leading-5 text-gray-500">Età: 25 anni</p>
-          </div>
-        </div>
-        <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-          <p class="text-sm leading-6 text-gray-900">Nazionalità: </p>
-          <p class="mt-1 text-xs leading-5 text-gray-500">Ruolo: Attaccante</p>
-        </div>
-      </li>
-      <li class="flex justify-between gap-x-6 py-5">
-        <div class="flex min-w-0 gap-x-4">
-          <img class="h-12 w-12 flex-none rounded-full bg-gray-50" style="width: 260px;" src="https://images2.gazzettaobjects.it/assets-mc/calcio/giocatori/kylian_mbappe_20121998.png" alt="">
-          <div class="min-w-0 flex-auto">
-            <p class="text-sm font-semibold leading-6 text-gray-900">Kylian Mbappè (Overall: 91)</p>
-            <p class="mt-1 truncate text-xs leading-5 text-gray-500">Età: 25 anni</p>
-          </div>
-        </div>
-        <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-          <p class="text-sm leading-6 text-gray-900">Nazionalità: </p>
-          <p class="mt-1 text-xs leading-5 text-gray-500">Ruolo: Attaccante</p>
-        </div>
-      </li>
-      <li class="flex justify-between gap-x-6 py-5">
-        <div class="flex min-w-0 gap-x-4">
-          <img class="h-12 w-12 flex-none rounded-full bg-gray-50" style="width: 260px;" src="https://images2.gazzettaobjects.it/assets-mc/calcio/giocatori/kylian_mbappe_20121998.png" alt="">
-          <div class="min-w-0 flex-auto">
-            <p class="text-sm font-semibold leading-6 text-gray-900">Kylian Mbappè (Overall: 91)</p>
-            <p class="mt-1 truncate text-xs leading-5 text-gray-500">Età: 25 anni</p>
-          </div>
-        </div>
-        <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-          <p class="text-sm leading-6 text-gray-900">Nazionalità: </p>
-          <p class="mt-1 text-xs leading-5 text-gray-500">Ruolo: Attaccante</p>
-        </div>
-      </li>
-      <li class="flex justify-between gap-x-6 py-5">
-        <div class="flex min-w-0 gap-x-4">
-          <img class="h-12 w-12 flex-none rounded-full bg-gray-50" style="width: 260px;" src="https://images2.gazzettaobjects.it/assets-mc/calcio/giocatori/kylian_mbappe_20121998.png" alt="">
-          <div class="min-w-0 flex-auto">
-            <p class="text-sm font-semibold leading-6 text-gray-900">Kylian Mbappè (Overall: 91)</p>
-            <p class="mt-1 truncate text-xs leading-5 text-gray-500">Età: 25 anni</p>
-          </div>
-        </div>
-        <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-          <p class="text-sm leading-6 text-gray-900">Nazionalità: </p>
-          <p class="mt-1 text-xs leading-5 text-gray-500">Ruolo: Attaccante</p>
-        </div>
-      </li>
   </ul>
