@@ -16,7 +16,7 @@
         <p class="text-sm leading-6 text-gray-900">nazionalità: <i class=" {{element.nazionalita}} flag"></i></p>
         <p class="mt-1 text-xs leading-5 text-gray-500">ruolo: {{element.ruolo}}</p>
         <p class="mt-1 text-xs leading-5 text-gray-500">squadra: {{element.squadra}}</p>
-        <button target="_blank" class="btn btn-primary" style="color: blue;">INFO GIOCATORE {{element.info}}</button> 
+        <button target="_blank" class="btn btn-primary" (click)="clickBottone(element.info)" style="color: blue;">INFO GIOCATORE</button> 
       </div>
     </li>
   </ul>

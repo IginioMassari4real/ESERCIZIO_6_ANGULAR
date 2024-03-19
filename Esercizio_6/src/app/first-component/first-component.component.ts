@@ -9,6 +9,10 @@ import { Component } from '@angular/core';
   styleUrl: './first-component.component.css'
 })
 export class FirstComponentComponent {
+
+  clickBottone(link: string){
+    window.open(link);
+  }
   
   calciatori = [
 
