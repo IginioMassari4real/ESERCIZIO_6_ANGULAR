@@ -1,0 +1,16 @@
+.attaccante{
+    background-color: lightcoral;
+}
+.centrocampista{
+    background-color: lightblue;
+}
+.portiere{
+    background-color: lightgreen;
+}
+.badge{
+    background-color: white;
+    color: white;        
+    padding: 2px 4px;
+    text-align: center;
+    border-radius: 3px;
+}

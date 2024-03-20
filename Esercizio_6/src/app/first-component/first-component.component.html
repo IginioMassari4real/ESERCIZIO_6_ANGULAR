@@ -1,9 +1,10 @@
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss2.2.19/dist/tailwind.min.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet">
-<h1 style="color: blue; margin-left:auto; margin-right:auto">I 10 GIOCATORI CON L'OVERALL PIU' ALTO DI FIFA 24</h1> 
-<img class="h-12 w-12 flex-none rounded-full bg-gray-50" style="width: 260px; " src="https://sm.ign.com/t/ign_it/screenshot/default/asf_j8hj.1280.jpg" alt="">
-<div class="card" style="width:400px;" *ngFor="let element of calciatori, index as i">
-<ul role="list" class="divide-y divide-gray-100">
+<h1 align="center" style="color: lightblue; margin-left:auto; margin-right:auto">I 10 GIOCATORI CON L'OVERALL PIU' ALTO DI EA SPORTS FC 24</h1> 
+<h3 align="center" style="color: white; margin-left:auto; margin-right:auto">EA SPORTS FC 24 è un videogioco sviluppato da EA Sports che permette ai giocatori di assumere il ruolo di manager di una squadra di calcio. Offre una combinazione di simulazione sportiva, strategia manageriale e azione sul campo, consentendo ai giocatori di gestire tutti gli aspetti della propria squadra, dalle tattiche di gioco alla gestione del mercato dei trasferimenti. Il gioco include varie modalità di gioco, come la carriera manageriale e il multiplayer online, offrendo un'esperienza calcistica completa.</h3>
+<img class="h-12 w-12 flex-none rounded-full bg-gray-50" style="width: 900px; margin-left: 21%; margin-right: 25%; " src="https://media-assets.wired.it/photos/6514a367d5bb866eb363fc6a/16:9/w_1920,c_limit/EAsports-FC-24-cover.jpg" alt="">
+<div  class="card" style="width:400px; margin-left: auto; margin-right: auto" *ngFor="let element of calciatori, index as i">
+<ul role="list" class="divide-y divide-gray-100" class="cerchio" [ngClass]="{'attaccante': calciatori[i].ruolo == 'attaccante', 'centrocampista': calciatori[i].ruolo == 'centrocampista', 'portiere': calciatori[i].ruolo == 'portiere'}">
     <li class="flex justify-between gap-x-6 py-5">
       <div class="flex min-w-0 gap-x-4">
         <img class="h-12 w-12 flex-none rounded-full bg-gray-50" style="width: 260px;" src="{{element.immagine}}" alt="">
@@ -12,8 +13,18 @@
           <p class="mt-1 truncate text-xs leading-5 text-gray-500">età: {{element.eta}}</p>
         </div>
       </div>
+     
+      <div [ngSwitch]="calciatori[i].nazionalita">
+        <div *ngSwitchCase="'fr'">nazionalità: <span class="badge"[ngSwitch]="calciatori[i].nazionalita"><i class="fr flag"></i></span></div>
+        <div *ngSwitchCase="'be'">nazionalità: <span class="badge"[ngSwitch]="calciatori[i].nazionalita"><i class="be flag"></i></span></div>
+        <div *ngSwitchCase="'no'">nazionalità: <span class="badge"[ngSwitch]="calciatori[i].nazionalita"><i class="no flag"></i></span></div>
+        <div *ngSwitchCase="'es'">nazionalità: <span class="badge"[ngSwitch]="calciatori[i].nazionalita"><i class="es flag"></i></span></div>
+        <div *ngSwitchCase="'ar'">nazionalità: <span class="badge"[ngSwitch]="calciatori[i].nazionalita"><i class="ar flag"></i></span></div>
+        <div *ngSwitchCase="'au'">nazionalità: <span class="badge"[ngSwitch]="calciatori[i].nazionalita"><i class="au flag"></i></span></div>
+        <p *ngSwitchDefault>default</p>
+      </div>
+
       <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-        <p class="text-sm leading-6 text-gray-900">nazionalità: <i class=" {{element.nazionalita}} flag"></i></p>
         <p class="mt-1 text-xs leading-5 text-gray-500">ruolo: {{element.ruolo}}</p>
         <p class="mt-1 text-xs leading-5 text-gray-500">squadra: {{element.squadra}}</p>
         <button target="_blank" class="btn btn-primary" (click)="clickBottone(element.info)" style="color: blue;">INFO GIOCATORE</button> 
